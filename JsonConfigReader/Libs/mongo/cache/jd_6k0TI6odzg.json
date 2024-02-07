@@ -1,0 +1,339 @@
+[
+    {
+        "header": {
+            "created": "2022-01-07T17:35:50.0",
+            "user": "bainderm",
+            "structureversion": "1.3",
+            "version": 1
+        },
+        "properties": {
+            "description": "Dieset1",
+            "id": 109362781,
+            "serialnumber": 23992222,
+            "station": 700
+        },
+        "materialnumbers": {
+            "bottomsection": 108785070,
+            "sealingmodule": [
+                {
+                    "domevolume": 0,
+                    "id": 108785065,
+                    "productprotrusion": 0
+                }
+            ],
+            "topsection": 108785073,
+            "traycarrier": 108785074,
+            "traygripper": 108785083,
+            "traylifter": 109371070,
+            "traysealer": {
+                "bottomsection": 108785070,
+                "topsection": 108785073,
+                "traycarrier": 108785074,
+                "traygripper": 108785083,
+                "traylifter": 109371070
+            }
+        },
+        "packages": [
+            {
+                "id": 108761136
+            },
+            {
+                "id": 108761137
+            }
+        ],
+        "positions": {
+            "base": 15,
+            "contact": 220,
+            "lifterdrop": 81,
+            "lifterend": 48.5,
+            "offsettraydelivery": 53,
+            "process": 220
+        },
+        "technicaldata": {
+            "domeheight": 0,
+            "domevolume": 0,
+            "productprotrusion": 0,
+            "trayheightmax": 100,
+            "trayheightmin": 12
+        }
+    },
+    {
+        "format": {
+            "cutlength": 242.5,
+            "cutlengthtd": 170.5,
+            "cutofflength": 770,
+            "cutwidth": 170.5,
+            "cutwidthtd": 242.5,
+            "divisionrows": 192.5,
+            "divisiontracks": 0,
+            "filmwidthmax": 328,
+            "filmwidthmin": 303,
+            "formatnumber": 112514,
+            "leading": "WSL",
+            "machinetype": "TX720",
+            "packrows": 4,
+            "packtracks": 1,
+            "traydistance": 26,
+            "traylength": 238.5,
+            "trayradius": 28,
+            "traywidth": 166.5
+        },
+        "header": {
+            "created": "2022-01-07T17:35:50.0",
+            "user": "bainderm",
+            "structureversion": "1.3",
+            "version": 1
+        },
+        "heatingcircuits": {
+            "layout": [
+                {
+                    "numberofactuators": 1,
+                    "numberofmodules": 4,
+                    "packrows": 1
+                }
+            ],
+            "layouttype": 999,
+            "packtracks": 1
+        },
+        "properties": {
+            "description": "Top Section 1-111",
+            "dietype": 999,
+            "id": 108785073,
+            "serialnumber": 29992222,
+            "identificationmodule": "SensorModule",
+            "station": 710
+        },
+        "sealingmodules": [
+            {
+                "cuttingtype": "LAGGING_KNIFE",
+                "heighttotal": 118.5,
+                "liftofsealingplate": 12,
+                "media": "NONE",
+                "optionalmedia": "NONE",
+                "positionknife": -2,
+                "ratedpower": 1260
+            }
+        ],
+        "sensormodules": [
+            {
+                "actuators": [
+                    {
+                        "controller": 1,
+                        "index": 1,
+                        "ratedpower": 1260
+                    },
+                    {
+                        "controller": 2,
+                        "index": 2,
+                        "ratedpower": 1260
+                    },
+                    {
+                        "controller": 3,
+                        "index": 3,
+                        "ratedpower": 1260
+                    },
+                    {
+                        "controller": 4,
+                        "index": 4,
+                        "ratedpower": 1260
+                    }
+                ],
+                "controllers": [
+                    {
+                        "heatingarea": 1,
+                        "index": 1,
+                        "temperaturesensor": 1
+                    },
+                    {
+                        "heatingarea": 1,
+                        "index": 2,
+                        "temperaturesensor": 2
+                    },
+                    {
+                        "heatingarea": 1,
+                        "index": 3,
+                        "temperaturesensor": 3
+                    },
+                    {
+                        "heatingarea": 1,
+                        "index": 4,
+                        "temperaturesensor": 4
+                    }
+                ],
+                "instance": 1,
+                "numberofpowerboards": 1,
+                "numberofunits": {
+                    "actuators": 4,
+                    "controllers": 4,
+                    "heatingareas": 1,
+                    "monitoringunits": 0,
+                    "temperaturesensors": 4
+                }
+            }
+        ],
+        "technicaldata": {
+            "activeclampingframe": 1,
+            "actuatorpressure4": 6.2,
+            "actuatorpressure6": 9.1,
+            "actuatorpressuremax": 10,
+            "actuatorpressuremin": 1,
+            "actuatortype": "ACTIVE",
+            "compensation": 0,
+            "cooling": 1,
+            "coolingframe": 0,
+            "clampingframe": 1,
+            "defaultpressuremax": 10,
+            "defaultpressuremin": 1,
+            "dievolume": 5,
+            "heighttomodule": 121.5,
+            "heighttotal": 257,
+            "linevoltage": 400,
+            "media": "",
+            "optionalmedia": "DOME_VACUUM",
+            "oxygenmeter": 0,
+            "sealingmodules": []
+        }
+    },
+    {
+        "header": {
+            "created": "2022-01-07T17:35:50.0",
+            "user": "bainderm",
+            "structureversion": "1.3",
+            "version": 1
+        },
+        "properties": {
+            "description": "Bottom Section1",
+            "dietype": 999,
+            "id": 108785070,
+            "serialnumber": 29992222,
+            "identificationmodule": "RFID",
+            "station": 720
+        },
+        "technicaldata": {
+            "dievolume": 5,
+            "heighttolifter": 16,
+            "heighttotal": 145,
+            "media": "VACUUM",
+            "trayheightmax": 100,
+            "trayheightmin": 12
+        }
+    },
+    {
+        "header": {
+            "created": "2022-01-07T17:35:50.0",
+            "user": "bainderm",
+            "structureversion": "1.3",
+            "version": 1
+        },
+        "properties": {
+            "description": "Tray Carrier1",
+            "dietype": 999,
+            "id": 108785074,
+            "serialnumber": 29992222,
+            "identificationmodule": "None",
+            "station": 721
+        },
+        "technicaldata": {
+            "componentwidth": 392.5,
+            "dieexecution": "STANDARD",
+            "heighttoframe": 0,
+            "heighttolifter": 16,
+            "heighttosealing": 36.5,
+            "heighttotal": 39,
+            "liftofsoft": 0,
+            "liftofspringloaded": 0,
+            "media": "VACUUM",
+            "sealingtype": "STANDARD",
+            "width": 392.5
+        }
+    },
+    {
+        "header": {
+            "created": "2022-01-07T17:35:50.0",
+            "user": "bainderm",
+            "structureversion": "1.3",
+            "version": 1
+        },
+        "properties": {
+            "description": "Tray Gripper1",
+            "id": 108785083,
+            "serialnumber": 29992222,
+            "identificationmodule": "RFID",
+            "station": 730
+        },
+        "technicaldata": {
+            "gripperprofiledepth": 41.5,
+            "gripperwidth": 177.5,
+            "length": 1641.1,
+            "loweredgedistance": 101,
+            "profiledepth": 41.5,
+            "trayheightmax": 50,
+            "trayheightmin": 12,
+            "width": 177.5
+        }
+    },
+    {
+        "header": {
+            "created": "2022-01-07T17:35:50.0",
+            "user": "bainderm",
+            "structureversion": "1.3",
+            "version": 1
+        },
+        "properties": {
+            "description": "Tray Lifter1",
+            "id": 109371070,
+            "serialnumber": 29992222,
+            "identificationmodule": "None",
+            "station": 722
+        },
+        "technicaldata": {
+            "heighttocarrier": 25,
+            "heighttocentralguide": 0,
+            "heighttotal": 66.5,
+            "heighttobottomsection": 66.5,
+            "liftofcentralguide": 0,
+            "offsetdievolume": 5,
+            "width": 214
+        }
+    },
+    {
+        "header": {
+            "created": "2022-01-07T17:35:50.0",
+            "user": "bainderm",
+            "structureversion": "1.3",
+            "version": 1
+        },
+        "properties": {
+            "description": "Tray",
+            "id": 108761136
+        },
+        "technicaldata": {
+            "manufacturer": "Sharpak",
+            "traydesignation": "D2 - 13 (27) SKP",
+            "traylength": "238.5",
+            "traywidth": "166.5",
+            "trayradius": "28",
+            "traymaterialbase": "HF"
+        }
+    },
+    {
+        "header": {
+            "created": "2022-01-07T17:35:50.0",
+            "user": "TEST",
+            "structureversion": "1.3",
+            "version": 1
+        },
+        "properties": {
+            "description": "Tray",
+            "id": 108761137
+        },
+        "technicaldata": {
+            "manufacturer": "TEST",
+            "traydesignation": "D2 - 13 (27) SKP",
+            "traylength": "238.5",
+            "traywidth": "166.5",
+            "trayradius": "28",
+            "traymaterialbase": "HF"
+        }
+    }
+]

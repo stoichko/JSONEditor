@@ -1,0 +1,94 @@
+{
+    "stHeader": {
+      "uiStructureVersion": 2,
+      "uiDataVersion": 1,
+      "szCreator": "felchf",
+      "dtCreated": "2023-03-06T08:54:39",
+      "szState": "new"
+    },
+    "stIdentification": {
+      "liMaterialNumber": 999999999,
+      "szCustomerDescription": ""
+    },
+    "stGeneralProperties": {
+      "szDieType": "sea_sip_wuw",
+      "szStorageDevice": "MUSD100"
+    },
+    "stFormatDescription": {
+      "aliFormatNumber": [
+        117995
+      ],
+      "aiFormatIndex": [
+        6500
+      ],
+      "iNominalMachineWidth": 560,
+      "rFormatCutOffLength": 455
+    },
+    "stVarioDescription": {
+      "aliVarioNumber": [
+        117996
+      ],
+      "aiVarioIndex": [
+        650
+      ],
+      "rVarioCutOffLength": 455,
+      "iTracks": 4,
+      "iRows": 3,
+      "aliSinglePackDrawing": [
+        15000385377
+      ],
+      "rPackWidth": 124.75,
+      "rPackLength": 146.67,
+      "rPackFootprint": 12402,
+      "rFormingRatio": 0.0344,
+      "rFormingRatioOffset": 0
+    },
+    "stHeatingParameters": {
+      "asiCableBlocksPerHeatingArea": [
+        1
+      ],
+      "asiSensorPartition": [
+        2
+      ],
+      "asiActuatorPartition": [
+        2
+      ],
+      "aiActuatorPower": [
+        [
+          3450,
+          3450,
+          0
+        ]
+      ],
+      "iExternalPreheatingTemperature": 60,
+      "iMaximumTemperature": 220,
+      "szHeatingPlateType": "tubular_heating_element",
+      "asiMonitoringCableBlocksPerHeatingArea": [
+        0
+      ],
+      "asiMonitoringSensorPartition": [
+        0
+      ]
+    },
+    "stTechnicalData": {
+      "aszDiaphragmType": [
+        ""
+      ],
+      "adiEffectiveProcessArea": [
+        26725
+      ],
+      "adiEffectiveDiaphragmArea": [
+        0
+      ],
+      "adiTotalSpringForce": [
+        2600
+      ],
+      "aiMaxDiaphragmPressure": [
+        0
+      ],
+      "diSealLiftingVolume": 1209026
+    },
+    "stFooter": {
+      "bEndOfFile": true
+    }
+  }
