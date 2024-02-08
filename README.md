@@ -1,13 +1,17 @@
 # JSONReaderExtension
 
-Overview
-JsonReaderExtension simplifies reading configurations from appsettings.json files in .NET applications, using the modular JsonReaderService for efficient JSON parsing.
+#Overview:
 
-JsonReaderService
-JsonReaderService is the core component responsible for reading and parsing JSON files. It can be extended or replaced for custom behavior.
+JsonReaderExtension simplifies configuration retrieval from appsettings.json files in .NET applications. Utilizing the modular JsonReaderService ensures efficient JSON parsing.
 
-Contributing
+#JsonReaderService:
+
+JsonReaderService is the core component responsible for reading and parsing JSON files. It remains modular for easy extension or replacement.
+
+#Contributing:
+
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-License
+#License:
+
 This project is licensed under the MIT License - see the LICENSE file for details.
