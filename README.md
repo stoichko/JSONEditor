@@ -2,7 +2,7 @@
 
 **Overview:**
 
-`JsonReaderExtension` simplifies configuration retrieval from `appsettings.json` files in .NET applications. Utilizing the modular **JsonReaderService** ensures efficient JSON parsing.
+`JsonReaderExtension` simplifies configuration retrieval from `appsettings.json` files. Utilizing the modular **JsonReaderService** ensures efficient JSON parsing.
 
 **JsonReaderService:**
 
