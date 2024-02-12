@@ -13,7 +13,7 @@ class JsonReader {
  */
     public static function getValueFromKey($site,$creds,$keyPath) : string {
         
-        $filePath = file_get_contents(__DIR__ . '/../../ConfigurationSettings/appSettings.json');
+        $filePath = file_get_contents(__DIR__ . '/../../conf/appSettings.json');
         $data = json_decode($filePath, true);
 
         if (isset($data[$site]) && is_array($data[$site])) {
@@ -35,7 +35,7 @@ class JsonReader {
  * Returns current version of the appSettings.json file
  */
     public static function getVersion() : string {
-        $filePath = file_get_contents(__DIR__ . '/../../ConfigurationSettings/appSettings.json');
+        $filePath = file_get_contents(__DIR__ . '/../../conf/appSettings.json');
         $data = json_decode($filePath, true);
 
         return $data['version'];

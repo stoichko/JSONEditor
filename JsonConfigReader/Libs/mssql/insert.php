@@ -1,5 +1,5 @@
 <?php
-require(__DIR__ . '/../../ConfigurationSettings/config.php');
+require(__DIR__ . '/../../conf/config.php');
 
 print_r($mssqlServerName);
 
