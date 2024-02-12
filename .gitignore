@@ -3,3 +3,6 @@
 
 # Except for this specific folder
 !JsonConfigReader
+!JsonConfigReader/app
+!JsonConfigReader/conf
+!JsonConfigReader/libs
