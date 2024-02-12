@@ -439,7 +439,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // check if input data is JSON
 
     var communication_file =
-      "/jsonexcel/Autofill/keytech_communication_comb_v2.php";
+      "/JsonConfigReader/App/jsonexcel/Autofill/keytech_communication_comb_v2.php";
     let result;
 
     try {
@@ -470,7 +470,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ) {
     // check if input data is JSON
 
-    var communication_file = "/jsonexcel/Autofill/keytech_format_sketch.php";
+    var communication_file = "/JsonConfigReader/App/jsonexcel/Autofill/keytech_format_sketch.php";
     let result;
 
     try {

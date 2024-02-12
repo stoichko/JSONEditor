@@ -1,6 +1,8 @@
 <?php
 require(__DIR__ . '/../../ConfigurationSettings/config.php');
 
+print_r($mssqlServerName);
+
 try {
      $conn = new PDO("sqlsrv:server=$mssqlServerName;Database=$mssqlDatabaseName;ConnectionPooling=0", $mssqlUsername, $mssqlPassword,
          array(

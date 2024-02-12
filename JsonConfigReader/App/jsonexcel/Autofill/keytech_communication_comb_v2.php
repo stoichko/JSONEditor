@@ -38,8 +38,7 @@ else $output_result = $_GET['return'];
 
 function connect($id, $input_type)
 {
-    require_once('../../config.php');
-
+    require('\\\\muwo-jedi-q.multivac.int\\wwwroot\\JSONEditor\\JsonConfigReader\\ConfigurationSettings\\config.php');
     $url_classiffication = $keytechUrl_Classiffication . $id;
     $url_bom = $keytechUrl_Bom . $id;
 
@@ -66,6 +65,8 @@ function connect($id, $input_type)
         return $get_keytech_content_classiffication;
     }
 }
+
+connect($id,$input_type);
 
 function getUrl($url, $username = false, $password = false)
 {

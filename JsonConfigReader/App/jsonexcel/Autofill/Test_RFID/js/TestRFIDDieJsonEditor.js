@@ -171,7 +171,7 @@
     
             // check if input data is JSON
          
-            var communication_file = "/jsonexcel/Autofill/keytech_communication_comb_v2.php";
+            var communication_file = "/JsonConfigReader/App/jsonexcel/Autofill/keytech_communication_comb_v2.php";
             let result;
     
                 try {
@@ -200,7 +200,7 @@
     
             // check if input data is JSON
          
-            var communication_file = "/jsonexcel/Autofill/keytech_format_sketch.php";
+            var communication_file = "/JsonConfigReader/App/jsonexcel/Autofill/keytech_format_sketch.php";
             let result;
     
                 try {
