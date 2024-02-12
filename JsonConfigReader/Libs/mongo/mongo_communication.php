@@ -1,6 +1,6 @@
 <?php
 require 'vendor/autoload.php';
-require(__DIR__ . '/../../ConfigurationSettings/config.php');
+require(__DIR__ . '/../../conf/config.php');
 
 /**Connecto to MongoDb */
 
