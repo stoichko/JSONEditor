@@ -9,5 +9,6 @@ if (isset($_GET['action']) && $_GET['action'] === 'getValueForKey') {
 
     echo JsonReader::getValueFromKey($site, $creds, $keyPath);
     exit();
+    
 }
 ?>
