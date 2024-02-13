@@ -1,6 +1,5 @@
 # Ignore everything
-*
+/*
 
 # Except for this specific folder
-!JsonConfigReader
-
+!/JsonConfigReader/
