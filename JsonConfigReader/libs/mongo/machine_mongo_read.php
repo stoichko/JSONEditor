@@ -13,6 +13,8 @@ $SerialNumber = (int)$_GET['liSerialNumber'];
 
 
 $read = machine_mongo_read($SerialNumber);
+
+
 // print_r(json_encode($read));
 //replace tabs with two spaces
 //10.04.2023
