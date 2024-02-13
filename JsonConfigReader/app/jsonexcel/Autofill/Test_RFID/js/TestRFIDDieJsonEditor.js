@@ -22,6 +22,7 @@
         const strName = 'name';
         const strCount = 'count';
         const strValue = 'value';
+        const strTest = 'value';
             
         async function autofill() {
             //splash screen start
