@@ -7,11 +7,8 @@ date_default_timezone_set('Europe/Berlin');
 // require "mongo_communication.php";
 require "mongo_read_insert_update.php";
 
-// $sn = (int)$_GET['serial'];
-// $id = (int)$_GET['id'];
-$MaterialNumber = (int)$_GET['liMaterialNumber'];
-
-$read = dsu_mongo_read($MaterialNumber);
+$materialNumber = $_GET['liMaterialNumber'];
+$read = dsu_mongo_read($materialNumber);
 
 //replace tabs with two spaces
 //10.04.2023

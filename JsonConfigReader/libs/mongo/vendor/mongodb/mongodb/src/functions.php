@@ -256,6 +256,8 @@ function server_supports_feature(Server $server, int $feature): bool
     return $minWireVersion <= $feature && $maxWireVersion >= $feature;
 }
 
+
+
 /**
  * Return whether the input is an array of strings.
  *
