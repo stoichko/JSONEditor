@@ -1,6 +1,6 @@
 <?php
 
-require('../config.php');
+require(__DIR__ . '/../../conf/config.php');
 
 class msssql
 {
@@ -17,7 +17,7 @@ class msssql
 
     private function tableSelect($formName)
     {
-       
+
         /** Choosing MSSQL table name
          * $formName comes from third party code
          */
@@ -70,12 +70,12 @@ class msssql
 
         $sql = "SELECT dVer FROM " . $mssqlTable . " WHERE " . $column . " = " . $identifier;
         $result = [];
-        // print_r($sql);
+
         foreach ($conn->query($sql) as $row) {
-            // print_r($row);
+            print_r($row);
             $result[] = (int)$row['dVer'];
         }
-        // print_r($result);
+        // print_r($result . '<br/>');
 
         if (empty($result)) {
             $result[] = 0;
@@ -85,9 +85,9 @@ class msssql
 
     private function communication()
     {
-        require_once('../config.php');
+        global $mssqlServerName, $mssqlDatabaseName, $mssqlUsername, $mssqlPassword;
         $conn = new PDO(
-            "sqlsrv:server=$mssqlTable;Database=$mssqlDatabaseName;ConnectionPooling=0",
+            "sqlsrv:server=$mssqlServerName;Database=$mssqlDatabaseName;ConnectionPooling=0",
             $mssqlUsername,
             $mssqlPassword,
             array(
@@ -169,16 +169,19 @@ class msssql
     public function JsonRead($identifier, $formName)
     {
         $conn = $this->communication();
-        $mssqlTable = $this->tableSelect($formName);
-        $column = $this->colSelect($mssqlTable);
-        $version = $this->lastVersion($identifier, $mssqlTable);
+        $table = $this->tableSelect($formName);
+        $column = $this->colSelect($table);
+        $version = $this->lastVersion($identifier, $table);
+
+        print_r($version);
 
         if ($version < 0) {
             die('Json is not found in MSSQl');
         }
 
-        $sql = "SELECT jsonFile FROM " . $mssqlTable . " WHERE " . $column . " = " . $identifier . " AND dVer = " . $version;
+        $sql = "SELECT jsonFile FROM " . $table . " WHERE " . $column . " = " . $identifier . " AND dVer = " . $version;
         $result = $conn->query($sql)->fetch();
-        return $result[0];
+        // return $result[0];
+        return $result;
     }
 }

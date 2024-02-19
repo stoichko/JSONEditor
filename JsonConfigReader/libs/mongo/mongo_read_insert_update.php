@@ -2,6 +2,7 @@
 
 
 require "mongo_communication.php";
+require(__DIR__ . '/../../conf/config.php');
 /*Tools for all*/
 
 function json_formating($data)
@@ -274,9 +275,11 @@ function RFID_dictionary($data)
 }
 function RFID_mongo_insert_record($json)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = "TFP";
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     // print_r($collection);
     $collection->insertOne($json);
     // echo "insert in ".$dbFolder." successfully!";
@@ -285,9 +288,11 @@ function RFID_mongo_insert_record($json)
 
 function RFID_mongo_read($matNumber)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = 'TFP';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
 
     $search_mongo = array(
         "stIdentification.liMaterialNumber" => (int)$matNumber,
@@ -314,9 +319,11 @@ function RFID_mongo_read($matNumber)
 function RFID_mongo_check_existing($matNumber)
 {
 
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = 'TFP';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     $search_mongo = array(
         "stIdentification.liMaterialNumber" => (int)$matNumber
     );
@@ -328,9 +335,11 @@ function RFID_mongo_check_existing($matNumber)
 
 function RFID_mongo_update_record($matNumber, $json)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = 'TFP';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     $collection->updateOne(
         ["stIdentification.liMaterialNumber" => (int)$matNumber],
         ['$set' => $json]
@@ -468,9 +477,11 @@ function dieset_dictionary($data)
 
 function dieset_check_exsisting($diesetNumber)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = 'TFP_dieset';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     $search_mongo = array(
         "stIdentification.liDiesetNumber" => (int)$diesetNumber
     );
@@ -482,9 +493,11 @@ function dieset_check_exsisting($diesetNumber)
 
 function dieset_mongo_insert_record($json)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = "TFP_dieset";
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     // print_r($collection);
     $collection->insertOne($json);
     // echo "insert in ".$dbFolder." successfully!";
@@ -493,9 +506,11 @@ function dieset_mongo_insert_record($json)
 
 function dieset_mongo_update_record($diesetNumber, $json)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = 'TFP_dieset';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     $collection->updateOne(
         ["stIdentification.liDiesetNumber" => (int)$diesetNumber],
         ['$set' => $json]
@@ -504,10 +519,12 @@ function dieset_mongo_update_record($diesetNumber, $json)
 
 function dieset_mongo_read($diesetNumber)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
 
     $dbFolder = 'TFP_dieset';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
 
     $search_mongo = array(
         "stIdentification.liDiesetNumber" => (int)$diesetNumber,
@@ -705,9 +722,11 @@ function dsu_dictionary($data)
 }
 function dsu_check_exsisting($MaterialNumber)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = 'TFP_dsu';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     $search_mongo = array(
         "stIdentification.liMaterialNumber" => (int)$MaterialNumber
     );
@@ -719,9 +738,11 @@ function dsu_check_exsisting($MaterialNumber)
 
 function dsu_mongo_insert_record($json)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = "TFP_dsu";
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     // print_r($collection);
     $collection->insertOne($json);
     // echo "insert in ".$dbFolder." successfully!";
@@ -730,9 +751,11 @@ function dsu_mongo_insert_record($json)
 
 function dsu_mongo_update_record($MaterialNumber, $json)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = 'TFP_dsu';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     $collection->updateOne(
         ["stIdentification.liMaterialNumber" => (int)$MaterialNumber],
         ['$set' => $json]
@@ -741,15 +764,14 @@ function dsu_mongo_update_record($MaterialNumber, $json)
 
 function dsu_mongo_read($MaterialNumber)
 {
-    global $client, $db;
-
+    global $client,$mongoDb;
+    
     $dbFolder = 'TFP_dsu';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb->$dbFolder;
 
     $search_mongo = array(
         "stIdentification.liMaterialNumber" => (int)$MaterialNumber,
     );
-
     $cursor = $collection->find($search_mongo)->toArray();
     // print_r($search_mongo);
     // die();
@@ -863,9 +885,11 @@ function machine_dictionary($data)
 
 function machine_check_exsisting($liSerialNumber)
 {
-    global $client, $db;
+    global $client, $mongoDb
+    ;
     $dbFolder = 'TFP_machine';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb
+    ->$dbFolder;
     $search_mongo = array(
         "stIdentification.liSerialNumber" => (int)$liSerialNumber
     );
@@ -877,9 +901,9 @@ function machine_check_exsisting($liSerialNumber)
 
 function machine_mongo_insert_record($json)
 {
-    global $client, $db;
+    global $client, $mongoDb;
     $dbFolder = "TFP_machine";
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb->$dbFolder;
     // print_r($collection);
     $collection->insertOne($json);
     // echo "insert in ".$dbFolder." successfully!";
@@ -888,9 +912,9 @@ function machine_mongo_insert_record($json)
 
 function machine_mongo_update_record($liSerialNumber, $json)
 {
-    global $client, $db;
+    global $client, $mongoDb;
     $dbFolder = 'TFP_machine';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb->$dbFolder;
     $collection->updateOne(
         ["stIdentification.liSerialNumber" => (int)$liSerialNumber],
         ['$set' => $json]
@@ -899,10 +923,10 @@ function machine_mongo_update_record($liSerialNumber, $json)
 
 function machine_mongo_read($liSerialNumber)
 {
-    global $client, $db;
+    global $client, $mongoDb;
 
     $dbFolder = 'TFP_machine';
-    $collection = $client->$db->$dbFolder;
+    $collection = $client->$mongoDb->$dbFolder;
 
     $search_mongo = array(
         "stIdentification.liSerialNumber" => (int)$liSerialNumber,
