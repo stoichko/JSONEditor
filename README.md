@@ -1,13 +1,19 @@
-# JsonReaderExtension
 
 **Overview:**
 
-`JsonReaderExtension` simplifies configuration retrieval from `appsettings.json` files. Utilizing the modular **JsonReaderService** ensures efficient JSON parsing.
+**Prerequisites:**
 
-**JsonReaderService:**
+Before using *TFP*, ensure that you have the initial skeleton for JSONEditor set up in your project.
 
-*JsonReaderService* is the core component responsible for reading and parsing JSON files. It remains modular for easy extension or replacement.
+1. **Install JSONEditor Locally:**
+   Ensure you have the JSONEditor skeleton on your local machine.
 
-**Contributing:**
+   **Note:** TFP relies on the initial skeleton provided by JSONEditor. Make sure to set up the JSONEditor environment in your project before proceeding.
 
-Contributions are **welcome**! Feel free to open issues or submit pull requests.
+**Getting Started:**
+
+Once you have the JSONEditor initial skeleton set up, follow these steps to use:
+
+1. **Clone the Repository:**
+   ```bash
+   git clone https://github.com/kozarevr/JEDI-TFP.git
